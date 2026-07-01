@@ -104,7 +104,8 @@
   }
   .btn-primary{background:var(--accent); color:#06140f; border-color:var(--accent); font-weight:600;}
   .btn-primary:hover{box-shadow:0 0 24px rgba(110,231,197,0.4); transform:translateY(-1px);}
-  .btn-ghost:hover{border-color:var(--accent2); color:var(--accent2);}
+  .btn-resume{background:transparent; color:var(--accent); border-color:var(--accent);}
+  .btn-resume:hover{background:rgba(110,231,197,0.08); box-shadow:0 0 16px rgba(110,231,197,0.2);}
 
   /* section heading */
   .section{padding:90px 0; border-top:1px solid var(--line); scroll-margin-top:80px;}
@@ -122,17 +123,17 @@
   .hero-flex{display:flex; align-items:center; gap:56px; justify-content:space-between;}
   .hero-copy{flex:1; min-width:0;}
   .portrait-frame{
-    flex-shrink:0; width:270px; height:270px; border-radius:50%;
-    border:2px solid var(--line); overflow:hidden; position:relative;
+    flex-shrink:0; width:190px; height:190px; border-radius:14px;
+    border:1px solid var(--line); overflow:hidden; position:relative;
     background:var(--bg-soft);
   }
   .portrait-frame img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(15%);}
   .portrait-frame::after{
-    content:""; position:absolute; inset:0; border-radius:50%;
+    content:""; position:absolute; inset:0; border-radius:14px;
     box-shadow: inset 0 0 0 1px rgba(110,231,197,0.15);
   }
   .portrait-tag{
-    margin-top:14px; font-family:'JetBrains Mono', monospace; font-size:25px; color:var(--text-dim);
+    margin-top:14px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--text-dim);
     text-align:center;
   }
   @media (max-width:800px){.hero-flex{flex-direction:column-reverse; align-items:flex-start;}}
@@ -225,6 +226,7 @@
       <a href="#achievements">achievements</a>
       <a href="#projects">projects</a>
       <a href="#contact">contact</a>
+      <a href="#" target="_blank" rel="noopener" style="color:var(--accent);">resume</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -237,17 +239,18 @@
     <div class="hero-flex">
       <div class="hero-copy">
         <div class="eyebrow">currently building agentic systems</div>
-        <h1><span class="grad">AI Engineer</span> Building scalable AI systems.</h1>
+        <h1><span class="grad">AI Engineer</span> shipping end‑to‑end systems.</h1>
         <p class="lede">AI Engineer focused on retrieval-augmented generation, multi-agent orchestration, and deploying intelligent systems that solve real business problems — not demos.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#projects">View projects →</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/prudhvi-k-387257222" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/prudhvikakkunuri" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-resume" href="#" target="_blank" rel="noopener">Resume ↓</a>
         </div>
       </div>
       <div>
         <div class="portrait-frame">
-          <img src="image.png" alt="Prudhvi Kakkunuri">
+          <img src="profile.png" alt="Prudhvi Kakkunuri">
         </div>
         <div class="portrait-tag">Prudhvi Kakkunuri</div>
       </div>
@@ -311,37 +314,22 @@
         <div class="skill-group-label">Generative AI & Agents</div>
         <div class="pill-row">
           <span class="pill">Generative AI & LLMs</span>
-          <span class="pill">Gemini</span>
-          <span class="pill">Open AI</span>
-          <span class="pill">Mistral AI</span>
-          <span class="pill">Claude AI</span>
           <span class="pill">LangChain</span>
           <span class="pill">LangChain Agents</span>
           <span class="pill">LangGraph</span>
           <span class="pill">LangSmith</span>
           <span class="pill">n8n Agentic Workflows</span>
-          <span class="pill">RAG Architectures</span>  
-          <span class="pill">RAG Pipelines</span>
-          <span class="pill">Agentic Design Patterns</span>
-          <span class="pill">MCP</span>
-          <span class="pill">Transformer Architecture</span>
-
-
+          <span class="pill">RAG Architectures</span>
         </div>
       </div>
       <div>
         <div class="skill-group-label">ML / Core Engineering</div>
         <div class="pill-row">
           <span class="pill">Machine Learning</span>
-          <span class="pill">Deep Learning</span>          
-          <span class="pill">NLP</span>          
-          <span class="pill">OpenCV</span>
-          <span class="pill">Computer Vision</span>
+          <span class="pill">Deep Learning</span>
           <span class="pill">Python</span>
           <span class="pill">SQL</span>
           <span class="pill">Model Evaluation</span>
-          <span class="pill">Power BI</span>
-          <span class="pill">Data Analytics</span>
         </div>
       </div>
       <div>
@@ -430,10 +418,29 @@
   </div>
 </section>
 
-<section class="section" id="projects">
+<section class="section" id="resume">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num">06</span>
+      <span class="section-title">Resume</span>
+    </div>
+    <div class="resume-card">
+      <div class="resume-info">
+        <div class="resume-title">Prudhvi Kakkunuri — AI Engineer</div>
+        <div class="resume-desc">Full work history, skills, and project details in one PDF.</div>
+      </div>
+      <div class="cta-row" style="margin-top:0;">
+        <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View resume ↗</a>
+        <a class="btn btn-ghost" href="resume.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">07</span>
       <span class="section-title">Projects</span>
     </div>
     <div class="project-list">
@@ -499,7 +506,7 @@
 <section class="section" id="contact">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-num">07</span>
+      <span class="section-num">08</span>
       <span class="section-title">Get in touch</span>
     </div>
     <p class="lede" style="margin-top:0;">Open to conversations about agentic systems, RAG architectures, and AI applications that need to go from prototype to production.</p>
@@ -524,6 +531,7 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:prudhvi.kakkunuri@gmail.com">Email me →</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/prudhvi-k-387257222" target="_blank">Connect on LinkedIn</a>
+      <a class="btn btn-resume" href="#" target="_blank" rel="noopener">Resume ↓</a>
     </div>
   </div>
 </section>

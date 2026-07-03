@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="https://github.com/prudhvikakkunuri/prudhvikakkunuri.github.io/blob/main/favicon.png?raw=true">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prudhvi Kakkunuri - AI Engineer</title>
@@ -70,12 +69,12 @@ h1{font-size:clamp(40px,5.5vw,72px);font-weight:700;line-height:1.05;letter-spac
 .portrait-shine{position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,0.12) 0%,transparent 50%);}
 .portrait-ring{position:absolute;inset:-2px;border-radius:50%;background:linear-gradient(135deg,#00e5b0,#9b8cff,#00c49a);z-index:-1;animation:ringRotate 4s linear infinite;}
 @keyframes ringRotate{0%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);}}
-.portrait-tag{margin-top:16px;font-family:"JetBrains Mono",monospace;font-size:17px;color:var(--text-dim);text-align:center;}
+.portrait-tag{margin-top:16px;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--text-dim);text-align:center;}
 .badge{position:absolute;background:linear-gradient(135deg,var(--bg-card),var(--bg-soft));border-radius:10px;padding:8px 14px;font-family:"JetBrains Mono",monospace;font-size:11px;box-shadow:0 8px 30px rgba(0,0,0,0.5);animation:floatBadge 3s ease-in-out infinite;white-space:nowrap;}
 .badge1{bottom:-14px;right:-18px;border:1px solid rgba(0,229,176,0.35);color:#00e5b0;}
 .badge2{top:-12px;left:-18px;border:1px solid rgba(155,140,255,0.3);color:#9b8cff;animation-delay:0.7s;}
 @keyframes floatBadge{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
-@media(max-width:800px){.hero-flex{flex-direction:column-reverse;align-items:flex-start;}.portrait-3d{width:200px;height:200px;}.badge{display:none;}}
+@media(max-width:800px){.hero-flex{flex-direction:column-reverse;align-items:flex-start;}.portrait-3d{width:200px;height:200px;}.badge{font-size:9px;padding:6px 10px;} .badge1{bottom:-10px;right:-8px;} .badge2{top:-10px;left:-8px;}}
 .section{padding:100px 0;border-top:1px solid rgba(255,255,255,0.05);scroll-margin-top:80px;position:relative;}
 .section::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#00e5b0,#9b8cff,transparent);opacity:0.15;}
 .section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:56px;}
@@ -85,7 +84,7 @@ h1{font-size:clamp(40px,5.5vw,72px);font-weight:700;line-height:1.05;letter-spac
 @media(max-width:800px){.about-grid{grid-template-columns:1fr;}}
 .about-text p{color:var(--text-dim);font-size:15.5px;line-height:1.85;margin-bottom:18px;}
 .about-text strong{color:var(--text);}
-.graph-wrap{border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px;background:linear-gradient(135deg,rgba(13,17,32,0.9),rgba(15,20,32,0.7));backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:all 0.4s;}
+.graph-wrap{border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px;background:linear-gradient(135deg,rgba(13,17,32,0.45),rgba(15,20,32,0.35));backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:all 0.4s;}
 .graph-wrap:hover{border-color:rgba(0,229,176,0.3);box-shadow:0 20px 60px rgba(0,0,0,0.4);transform:translateY(-4px);}
 svg text{font-family:"JetBrains Mono",monospace;}
 .skill-groups{display:flex;flex-direction:column;gap:28px;}
@@ -327,16 +326,10 @@ h1 .grad{
 .skill-groups .fade-up:nth-child(4){ transition-delay: 0.3s; }
 
 /* ══ CERT CARD 3D ══ */
-a.cert-card:hover{
-  transform: translateY(-6px) perspective(500px) rotateX(5deg) rotateY(-2deg) !important;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 20px rgba(0,229,176,0.1) !important;
-}
+
 
 /* ══ RESUME CARD 3D ══ */
-.resume-card:hover{
-  transform: perspective(800px) rotateX(3deg) translateY(-4px) !important;
-  animation: none;
-}
+
 
 /* ══ LOGO HOVER ══ */
 .logo{
@@ -499,6 +492,35 @@ a.cert-card:hover{ animation:none !important; }
   33%{ transform:translate(25px,-30px) scale(1.05); }
   66%{ transform:translate(-15px,20px) scale(0.98); }
 }
+
+/* ══ GRAPH CARD 3D TILT (cursor pointer + deep tilt) ══ */
+.graph-wrap{
+  cursor: crosshair;
+  transition: transform 0.08s linear, border-color 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+}
+
+/* ══ ACHIEVEMENTS / CERT CARDS 3D TILT ══ */
+.cert-card{
+  cursor: default;
+  transform-style: preserve-3d;
+  transition: transform 0.08s linear, border-color 0.3s, box-shadow 0.3s, opacity 0.55s, translate 0.55s;
+  will-change: transform;
+}
+a.cert-card{ cursor: pointer; }
+
+/* ══ CONTACT CARDS 3D TILT ══ */
+.contact-grid .cert-card{
+  cursor: default;
+}
+
+/* ══ RESUME CARD 3D TILT ══ */
+.resume-card{
+  cursor: default;
+  transform-style: preserve-3d;
+  transition: transform 0.08s linear, border-color 0.3s, box-shadow 0.3s;
+  will-change: transform;
+}
 </style>
 </head>
 <body>
@@ -532,7 +554,7 @@ a.cert-card:hover{ animation:none !important; }
     <div class="hero-flex">
       <div class="hero-copy">
         <div class="eyebrow fade-up d1">currently building agentic systems</div>
-        <h1 class="fade-up d2"><span class="grad">AI Engineer</span><br>building scalable AI<br>systems.</h1>
+        <h1 class="fade-up d2"><span class="grad">AI Engineer</span><br>shipping end-to-end<br>systems.</h1>
         <p class="lede fade-up d3">Focused on retrieval-augmented generation, multi-agent orchestration, and deploying intelligent systems that solve real business problems, not demos.</p>
         <div class="cta-row fade-up d4">
           <a class="btn btn-primary" href="#projects">View projects</a>
@@ -545,7 +567,7 @@ a.cert-card:hover{ animation:none !important; }
         <div class="portrait-scene" id="portraitScene">
           <div class="portrait-3d" id="portrait3d">
             <div class="portrait-frame">
-              <img src="https://github.com/prudhvikakkunuri/prudhvikakkunuri.github.io/blob/main/image.png?raw=true" alt="Prudhvi Kakkunuri">
+              <img src="profile.png" alt="Prudhvi Kakkunuri">
               <div class="portrait-shine" id="portraitShine"></div>
             </div>
             <div class="portrait-ring"></div>
@@ -569,29 +591,8 @@ a.cert-card:hover{ animation:none !important; }
         <p>Most of my recent work centers on <strong>agentic systems</strong>: multi-step reasoning chains, tool-using agents, and orchestration graphs that coordinate multiple models toward a goal. I build these with <strong>LangChain</strong> and <strong>LangGraph</strong>, trace and debug them with <strong>LangSmith</strong>, and wire them into real workflows using <strong>n8n</strong>.</p>
         <p>Currently focused on building scalable AI applications and intelligent agents that solve real-world business problems, not just proofs of concept.</p>
       </div>
-      <div class="graph-wrap fade-right" id="graphCard">
-        <svg viewBox="0 0 360 250" width="100%" height="auto">
-          <defs><filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-          <line x1="60" y1="40" x2="180" y2="100" stroke="#0e2a14" stroke-width="1.5"/>
-          <line x1="300" y1="40" x2="180" y2="100" stroke="#0e2a14" stroke-width="1.5"/>
-          <line x1="180" y1="100" x2="100" y2="170" stroke="#0e2a14" stroke-width="1.5"/>
-          <line x1="180" y1="100" x2="260" y2="170" stroke="#0e2a14" stroke-width="1.5"/>
-          <line x1="100" y1="170" x2="180" y2="222" stroke="#0e2a14" stroke-width="1.5"/>
-          <line x1="260" y1="170" x2="180" y2="222" stroke="#0e2a14" stroke-width="1.5"/>
-          <rect x="20" y="26" width="80" height="28" rx="7" fill="#06091a" stroke="#9b8cff" stroke-width="1.5" filter="url(#glow)"/>
-          <text x="60" y="44" fill="#9b8cff" font-size="10" text-anchor="middle">retriever</text>
-          <rect x="266" y="26" width="68" height="28" rx="7" fill="#06091a" stroke="#9b8cff" stroke-width="1.5" filter="url(#glow)"/>
-          <text x="300" y="44" fill="#9b8cff" font-size="10" text-anchor="middle">tools</text>
-          <rect x="128" y="78" width="104" height="44" rx="9" fill="#06091a" stroke="#00e5b0" stroke-width="2" filter="url(#glow)"/>
-          <text x="180" y="96" fill="#00e5b0" font-size="10" text-anchor="middle">router</text>
-          <text x="180" y="111" fill="#00e5b0" font-size="10" text-anchor="middle">agent</text>
-          <rect x="58" y="156" width="84" height="28" rx="7" fill="#06091a" stroke="#9b8cff" stroke-width="1.5" filter="url(#glow)"/>
-          <text x="100" y="174" fill="#9b8cff" font-size="10" text-anchor="middle">memory</text>
-          <rect x="226" y="156" width="68" height="28" rx="7" fill="#06091a" stroke="#9b8cff" stroke-width="1.5" filter="url(#glow)"/>
-          <text x="260" y="174" fill="#9b8cff" font-size="10" text-anchor="middle">eval</text>
-          <rect x="138" y="208" width="84" height="28" rx="7" fill="#00e5b0" stroke="#00e5b0" stroke-width="2"/>
-          <text x="180" y="226" fill="#030a06" font-size="10" text-anchor="middle" font-weight="700">output</text>
-        </svg>
+      <div class="graph-wrap fade-right" id="graphCard" style="min-height:320px;display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;">
+        <canvas id="orbitCanvas" style="width:100%;height:350px;display:block;pointer-events:none;"></canvas>
       </div>
     </div>
   </div>
@@ -715,11 +716,11 @@ a.cert-card:hover{ animation:none !important; }
   <div class="wrap">
     <div class="section-head fade-scale"><span class="section-num">07</span><span class="section-title">Projects</span></div>
     <div class="project-grid">
-      <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/Multi-Agent-Research-Assistant/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">01</div><div class="project-name">Multi-Agent Research Assistant</div><div class="project-tag">Langchain - multi-agent orchestration</div></a>
+      <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/Multi-Agent-Research-Assistant/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">01</div><div class="project-name">Multi-Agent Research Assistant</div><div class="project-tag">LangGraph - multi-agent orchestration</div></a>
       <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/RAG-Book-Assistant/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">02</div><div class="project-name">RAG Book Assistant</div><div class="project-tag">RAG - vector database - LangChain</div></a>
       <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/Zomato-AI-Chatbot/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">03</div><div class="project-name">Zomato AI Chatbot</div><div class="project-tag">conversational agent - API integration</div></a>
-      <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/AI-Legal-Assistant/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">04</div><div class="project-name">AI Legal Assistant</div><div class="project-tag">Q&A Chatbot - Legal Reasoning - Prompt Engineering</div></a>
-      <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/AI-Budget-and-Financial-Advisor/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">05</div><div class="project-name">AI Budget and Financial Advisor</div><div class="project-tag">LLM agent - structured reasoning</div></a>
+      <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/AI-Legal-Assistant/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">04</div><div class="project-name">AI Legal Assistant</div><div class="project-tag">RAG - domain-specific retrieval</div></a>
+      <a class="project-card fade-up" href="https://prudhvikakkunuri.github.io/AI_Budget-and-Financial-Advisor/" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">05</div><div class="project-name">AI Budget and Financial Advisor</div><div class="project-tag">LLM agent - structured reasoning</div></a>
       <a class="project-card fade-up" href="https://huggingface.co/spaces/prudhvi28x/Swiggy-Delivery-Time_Prediction" target="_blank"><span class="project-arrow">-&gt;</span><div class="project-num">06</div><div class="project-name">Swiggy Delivery Time Prediction</div><div class="project-tag">machine learning - regression - deployment</div></a>
     </div>
   </div>
@@ -970,21 +971,171 @@ document.querySelectorAll("a.cert-card").forEach(function(card) {
   });
 });
 
-/* GRAPH CARD TILT */
+/* GRAPH CARD DEEP 3D TILT */
 var gc = document.getElementById("graphCard");
 if (gc) {
+  gc.style.cursor = "crosshair";
+  gc.addEventListener("mouseenter", function() {
+    gc.style.transition = "transform 0.08s linear, box-shadow 0.2s, border-color 0.2s";
+    gc.style.animation  = "none";
+  });
   gc.addEventListener("mousemove", function(e) {
     var r = gc.getBoundingClientRect();
     var x = (e.clientX - r.left) / r.width  - 0.5;
     var y = (e.clientY - r.top)  / r.height - 0.5;
-    gc.style.transform  = "perspective(700px) rotateY(" + (x*10) + "deg) rotateX(" + (-y*8) + "deg) translateY(-4px)";
-    gc.style.transition = "transform 0.08s linear";
+    gc.style.transform   = "perspective(650px) rotateY(" + (x*18) + "deg) rotateX(" + (-y*14) + "deg) translateY(-8px) scale(1.03)";
+    gc.style.borderColor = "rgba(0,229,176,0.35)";
+    gc.style.boxShadow   = "0 24px 60px rgba(0,0,0,0.5), 0 0 30px rgba(0,229,176,0.08)";
   });
   gc.addEventListener("mouseleave", function() {
-    gc.style.transform  = "perspective(700px) rotateY(0) rotateX(0) translateY(0)";
-    gc.style.transition = "transform 0.5s cubic-bezier(0.16,1,0.3,1)";
+    gc.style.transition  = "transform 0.6s cubic-bezier(0.16,1,0.3,1), border-color 0.4s, box-shadow 0.4s";
+    gc.style.transform   = "perspective(650px) rotateY(0deg) rotateX(0deg) translateY(0) scale(1)";
+    gc.style.borderColor = "";
+    gc.style.boxShadow   = "";
   });
 }
+
+/* ══ UNIVERSAL 3D TILT FUNCTION ══ */
+function addTilt(el, rotateMax, sc) {
+  el.addEventListener("mouseenter", function() {
+    el.style.transition = "transform 0.08s linear, box-shadow 0.2s, border-color 0.2s";
+  });
+  el.addEventListener("mousemove", function(e) {
+    var r  = el.getBoundingClientRect();
+    var x  = (e.clientX - r.left) / r.width  - 0.5;
+    var y  = (e.clientY - r.top)  / r.height - 0.5;
+    el.style.transform   = "perspective(650px) rotateY(" + (x * rotateMax) + "deg) rotateX(" + (-y * rotateMax * 0.75) + "deg) translateY(-7px) scale(" + sc + ")";
+    el.style.boxShadow   = "0 24px 60px rgba(0,0,0,0.5), 0 0 25px rgba(0,229,176,0.1)";
+    el.style.borderColor = "rgba(0,229,176,0.35)";
+    el.style.animation   = "none";
+  });
+  el.addEventListener("mouseleave", function() {
+    el.style.transition  = "transform 0.55s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s, border-color 0.4s";
+    el.style.transform   = "perspective(650px) rotateY(0deg) rotateX(0deg) translateY(0px) scale(1)";
+    el.style.boxShadow   = "";
+    el.style.borderColor = "";
+  });
+}
+
+/* Apply to ALL cert cards (achievements + contact) */
+document.querySelectorAll(".cert-card").forEach(function(card) {
+  addTilt(card, 14, 1.03);
+});
+
+/* Apply to resume card */
+var rc = document.querySelector(".resume-card");
+if (rc) { addTilt(rc, 10, 1.02); }
+
+/* ══ AI ENGINEER ORBIT WORD CLOUD ══ */
+(function() {
+  var canvas = document.getElementById("orbitCanvas");
+  if (!canvas) return;
+  var ctx = canvas.getContext("2d");
+
+  function resize() {
+    var parent = canvas.parentElement;
+    canvas.width  = parent ? parent.offsetWidth : 400;
+    canvas.height = 350;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  var terms = [
+    { label: "RAG Systems",         angle: Math.PI * 1.5,  orbitR: 0.50, speed: 0.005  },
+    { label: "AI Chatbots",         angle: Math.PI * 0.85, orbitR: 0.72, speed: 0.004  },
+    { label: "Research Assistants", angle: Math.PI * 0.05, orbitR: 0.72, speed: 0.0035 },
+    { label: "Workflow Automation", angle: Math.PI * 1.3,  orbitR: 0.92, speed: 0.003  },
+    { label: "Multi-Agent Systems", angle: Math.PI * 1.85, orbitR: 0.92, speed: 0.0028 },
+    { label: "Production AI Apps",  angle: Math.PI * 0.55, orbitR: 0.82, speed: 0.0032 },
+  ];
+
+  function draw() {
+    requestAnimationFrame(draw);
+    var W = canvas.width, H = canvas.height;
+    var cx = W / 2, cy = H / 2;
+    var baseR = Math.min(W * 0.40, H * 0.40);
+    var pad = 55;
+
+    ctx.clearRect(0, 0, W, H);
+
+    /* advance angles */
+    for (var i = 0; i < terms.length; i++) {
+      terms[i].angle += terms[i].speed;
+    }
+
+    /* orbit rings */
+    var ringRadii = [0.45, 0.70, 0.82, 1.0];
+    for (var r = 0; r < ringRadii.length; r++) {
+      ctx.beginPath();
+      ctx.arc(cx, cy, baseR * ringRadii[r], 0, Math.PI * 2);
+      ctx.setLineDash([3, 10]);
+      ctx.strokeStyle = "rgba(0,229,176,0.10)";
+      ctx.lineWidth   = 1;
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    /* terms */
+    for (var i = 0; i < terms.length; i++) {
+      var t  = terms[i];
+      var tx = cx + Math.cos(t.angle) * baseR * t.orbitR;
+      var ty = cy + Math.sin(t.angle) * baseR * t.orbitR;
+
+      /* line from centre */
+      var grad = ctx.createLinearGradient(cx, cy, tx, ty);
+      grad.addColorStop(0, "rgba(0,229,176,0.0)");
+      grad.addColorStop(1, "rgba(0,229,176,0.15)");
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(tx, ty);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth   = 1;
+      ctx.stroke();
+
+      /* glow dot */
+      ctx.beginPath();
+      ctx.arc(tx, ty, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle   = "rgba(0,229,176,0.4)";
+      ctx.shadowColor = "#00e5b0";
+      ctx.shadowBlur  = 6;
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+
+      /* label — clamped away from edges */
+      var lx  = Math.max(pad, Math.min(W - pad, tx));
+      var ly  = Math.max(pad, Math.min(H - 18, ty));
+      ctx.font         = "11px JetBrains Mono, monospace";
+      ctx.fillStyle    = "rgba(232,236,245,0.45)";
+      ctx.textAlign    = "center";
+      ctx.textBaseline = "bottom";
+      ctx.fillText(t.label, lx, ly - 7);
+      ctx.textBaseline = "alphabetic";
+    }
+
+    /* centre badge */
+    var bw = 140, bh = 42;
+    var bx = cx - bw / 2, by = cy - bh / 2;
+    /* glow behind badge */
+    ctx.shadowColor = "#00e5b0";
+    ctx.shadowBlur  = 20;
+    ctx.beginPath();
+    ctx.roundRect(bx, by, bw, bh, 9);
+    ctx.strokeStyle = "#00e5b0";
+    ctx.lineWidth   = 2;
+    ctx.stroke();
+    ctx.shadowBlur  = 0;
+    ctx.fillStyle   = "rgba(3,5,15,0.45)";
+    ctx.fill();
+
+    ctx.font         = "bold 14px JetBrains Mono, monospace";
+    ctx.fillStyle    = "#00e5b0";
+    ctx.textAlign    = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("AI Engineer", cx, cy);
+    ctx.textBaseline = "alphabetic";
+  }
+  draw();
+})();
 
 /* NAV HAMBURGER */
 var nt = document.getElementById("navToggle");

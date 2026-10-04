@@ -49,7 +49,8 @@
     "sameAs": [
       "https://www.linkedin.com/in/prudhvi-k-387257222",
       "https://github.com/prudhvikakkunuri",
-      "https://www.hackerrank.com/profile/prudhvi28"
+      "https://www.hackerrank.com/profile/prudhvi28",
+      "https://leetcode.com/u/prudhvi_28/"
     ],
     "knowsAbout": [
       "Artificial Intelligence",
@@ -234,12 +235,17 @@
       border-bottom-color: rgba(255, 107, 0, 0.25);
     }
 
+    header#top-nav .container {
+      max-width: 100%;
+      padding: 0 clamp(16px, 2.5vw, 36px);
+    }
+
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 72px;
-      gap: 16px;
+      gap: 12px;
     }
 
     .brand-terminal {
@@ -252,7 +258,6 @@
       color: #ffffff;
       letter-spacing: -0.5px;
       flex-shrink: 0;
-      margin-right: clamp(14px, 2.2vw, 36px);
       text-decoration: none;
     }
 
@@ -274,7 +279,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: clamp(12px, 1.8vw, 26px);
+      gap: clamp(8px, 1.4vw, 22px);
       list-style: none;
       margin: 0 auto;
       padding: 0;
@@ -282,12 +287,12 @@
 
     .nav-link {
       font-family: var(--font-mono);
-      font-size: clamp(0.72rem, 0.8vw, 0.8rem);
+      font-size: clamp(0.7rem, 0.78vw, 0.78rem);
       font-weight: 600;
       color: var(--text-muted);
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       text-transform: uppercase;
-      padding: 6px 4px;
+      padding: 6px 3px;
       white-space: nowrap;
       transition: color 0.2s ease;
     }
@@ -303,24 +308,25 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-shrink: 0;
-      margin-left: clamp(14px, 2.2vw, 36px);
     }
 
     /* CMD+K Search Button */
     .cmd-k-trigger {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       background: #0f0f0f;
       border: 1px solid var(--border);
       color: var(--text-muted);
       font-family: var(--font-mono);
-      font-size: 0.76rem;
-      padding: 8px 12px;
+      font-size: 0.74rem;
+      padding: 7px 10px;
       cursor: pointer;
       transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .cmd-k-trigger:hover {
@@ -336,7 +342,7 @@
       color: #ffffff;
     }
 
-    /* Angled Parallelogram Button (LET'S TALK) */
+    /* Angled Parallelogram Button (GET IN TOUCH) */
     .btn-angled-lime {
       display: inline-flex;
       align-items: center;
@@ -344,13 +350,14 @@
       background: var(--primary);
       color: #000000;
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       font-weight: 900;
-      padding: 11px 24px;
-      clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+      padding: 9px 18px;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
       cursor: pointer;
       transition: all 0.2s ease;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .btn-angled-lime:hover {
@@ -1037,9 +1044,10 @@
     /* Asymmetric Sidebar + 4-Column Numbered Cards */
     .arsenal-layout-grid {
       display: grid;
-      grid-template-columns: 290px 1fr;
-      gap: 32px;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
       align-items: flex-start;
+      min-width: 0;
     }
 
     .arsenal-sidebar {
@@ -1090,8 +1098,9 @@
     /* 4-Column Numbered Cards Grid */
     .numbered-skills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 16px;
+      min-width: 0;
     }
 
     .numbered-card {
@@ -1102,6 +1111,7 @@
       flex-direction: column;
       justify-content: space-between;
       min-height: 110px;
+      min-width: 0;
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       position: relative;
     }
@@ -1819,6 +1829,29 @@
     /* ==========================================================================
        Responsive System (Mobile First & Breakpoint Precision)
        ========================================================================== */
+    @media (max-width: 1280px) {
+      .arsenal-layout-grid {
+        grid-template-columns: 250px 1fr;
+        gap: 22px;
+      }
+      .numbered-skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .numbered-card {
+        padding: 16px 14px;
+        min-height: 100px;
+      }
+      .numbered-card .skill-name {
+        font-size: 0.96rem;
+      }
+      .sidebar-tab-btn {
+        padding: 13px 14px;
+        font-size: 0.78rem;
+        gap: 10px;
+      }
+    }
+
     @media (max-width: 1100px) {
       .nav-menu {
         gap: 12px;
@@ -3593,7 +3626,7 @@
               <a href="https://www.hackerrank.com/profile/prudhvi28" target="_blank" rel="noopener noreferrer" class="collab-social-btn" aria-label="HackerRank SQL Profile">
                 <i class="fa-brands fa-hackerrank"></i>
               </a>
-              <a href="https://leetcode.com/u/prudhvi28/" target="_blank" rel="noopener noreferrer" class="collab-social-btn" aria-label="LeetCode Profile">
+              <a href="https://leetcode.com/u/prudhvi_28/" target="_blank" rel="noopener noreferrer" class="collab-social-btn" aria-label="LeetCode Profile">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
                   <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.213 5.213 0 0 0-3.85-1.464 5.207 5.207 0 0 0-3.837 1.464L4.015 11.08c-.998.998-1.547 2.326-1.547 3.737s.549 2.74 1.547 3.738l4.331 4.363c.998.998 2.327 1.547 3.738 1.547s2.74-.549 3.738-1.547l2.609-2.636c.514-.514.496-1.365-.039-1.901-.535-.535-1.386-.553-1.9-.038zm-1.802-5.43H9.288c-.759 0-1.374-.615-1.374-1.374s.615-1.374 1.374-1.374h5.012c.759 0 1.374.615 1.374 1.374s-.615 1.374-1.374 1.374zm6.195-3.085L17.8 6.808c-.514-.514-1.365-.496-1.9.039-.535.535-.553 1.386-.039 1.9l2.695 2.607c.467.467.702 1.15.702 1.863s-.235 1.357-.702 1.824l-2.695 2.607c-.514.514-.496 1.365.039 1.9.535.535 1.386.553 1.9.039l2.695-2.607c.998-.998 1.547-2.326 1.547-3.737s-.549-2.739-1.547-3.737z"/>
                 </svg>

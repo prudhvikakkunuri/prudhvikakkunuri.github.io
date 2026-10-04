@@ -7,11 +7,11 @@ always_on: true
 # Portfolio Engineering & Design Standards
 
 ## 1. Brand Identity & Header Conventions
-- **Brand Logo**: The top navigation brand must render as `>_ prudhvi [.ai]`:
+- **Brand Logo**: The top navigation brand must render as `>_ PRUDHVI [.AI]`:
   ```html
-  <a href="#hero" class="brand-terminal" aria-label="prudhvi.ai">
+  <a href="#hero" class="brand-terminal" aria-label="PRUDHVI.AI">
     <span class="prompt">&gt;_</span>
-    <span>prudhvi</span><span class="site-box">.ai</span>
+    <span>PRUDHVI</span><span class="site-box">.AI</span>
   </a>
   ```
 - **Navigation Invariants**:

@@ -1,0 +1,242 @@
+/* ==========================================================================
+       Hero Section
+       ========================================================================== */
+    section.hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 110px;
+      padding-bottom: 60px;
+    }
+
+    .hero-eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 107, 0, 0.08);
+      border: 1px solid rgba(255, 107, 0, 0.35);
+      padding: 6px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+
+    .hero-eyebrow-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 10px var(--primary);
+      animation: radarRing 2.4s infinite, pulseDot 2s infinite;
+    }
+
+    @keyframes radarRing {
+      0% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7); }
+      70% { box-shadow: 0 0 0 9px rgba(255, 107, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0); }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
+    /* Giant Syne Typography (PRUDHVI in White, KAKKUNURI in Amber) */
+    .hero-giant-name {
+      font-size: clamp(1.8rem, 6.8vw, 5.8rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 36px;
+    }
+
+    .hero-giant-name .first {
+      display: block;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .hero-giant-name .last {
+      display: block;
+      color: var(--primary);
+      text-shadow: 0 0 35px rgba(255, 107, 0, 0.35);
+      white-space: nowrap;
+      animation: ambientNameGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes ambientNameGlow {
+      0%, 100% {
+        text-shadow: 0 0 25px rgba(255, 107, 0, 0.35), 0 0 50px rgba(255, 107, 0, 0.15);
+      }
+      50% {
+        text-shadow: 0 0 45px rgba(255, 107, 0, 0.75), 0 0 85px rgba(255, 107, 0, 0.35);
+      }
+    }
+
+    /* Sub-grid: Terminal Box + Brutalist Portrait */
+    .hero-sub-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* Terminal Box with Lime Corner Brackets */
+    .hero-terminal-card {
+      background: #09090b;
+      border: 1px solid var(--border);
+      padding: 32px;
+      position: relative;
+    }
+
+    .hero-terminal-card::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 14px;
+      height: 14px;
+      border-top: 2px solid var(--primary);
+      border-left: 2px solid var(--primary);
+    }
+
+    .hero-terminal-card::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2px solid var(--primary);
+      border-right: 2px solid var(--primary);
+    }
+
+    .hero-card-role-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card-role-title .badge-code {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #141418;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+
+    .hero-card-bio {
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .hero-btn-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-solid-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 11px 22px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-solid-white:hover {
+      background: var(--primary);
+      color: #000000;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost-mono {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      padding: 10px 20px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost-mono:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Portrait Frame */
+    .hero-portrait-card {
+      background: #09090b;
+      border: 1px solid var(--border);
+      padding: 16px;
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .portrait-photo-box {
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      background: #121214;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .portrait-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 10%;
+      filter: contrast(1.05) grayscale(15%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .portrait-photo-box:hover img {
+      filter: contrast(1.1) grayscale(0%);
+      transform: scale(1.03);
+    }
+
+    .portrait-telemetry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+
+    .portrait-telemetry span.active {
+      color: var(--primary);
+    }

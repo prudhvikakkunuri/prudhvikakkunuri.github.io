@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Master Stylesheet — Prudhvi Kakkunuri Portfolio
+   ========================================================================== */
+@import './variables.css';
+@import './components/nav.css';
+@import './components/hero.css';
+@import './components/stats.css';
+@import './components/work.css';
+@import './components/skills.css';
+@import './components/about.css';
+@import './components/career.css';
+@import './components/contact.css';
+@import './components/modal.css';
+@import './components/footer.css';
+@import './components/animations.css';
+@import './components/responsive.css';

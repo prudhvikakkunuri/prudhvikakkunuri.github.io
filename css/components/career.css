@@ -1,0 +1,139 @@
+/* ==========================================================================
+       Career & Academic Background (Timeline Layout)
+       ========================================================================== */
+    section.career-section {
+      padding: 110px 0;
+    }
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .career-card {
+      background: #0c0c0e;
+      border: 1px solid var(--border);
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .career-card:hover {
+      border-color: var(--border-lime);
+      transform: translateY(-3px);
+    }
+
+    .career-year-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--primary);
+      border: 1px solid var(--border-lime);
+      padding: 3px 10px;
+      width: fit-content;
+      margin-bottom: 14px;
+    }
+
+    .career-role {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .career-institution {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 18px;
+    }
+
+    .career-list-mono {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .career-list-mono li {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .career-list-mono li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    /* Verified Credentials Grid */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .cred-item-box {
+      background: #0c0c0e;
+      border: 1px solid var(--border);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .cred-item-box:hover {
+      border-color: var(--border-lime);
+      transform: translateY(-3px);
+    }
+
+    .cred-item-box h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .cred-item-box p {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+    }
+
+    .cred-item-box a,
+    .btn-cred {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(255, 107, 0, 0.08);
+      border: 1px solid var(--border-lime);
+      padding: 9px 14px;
+      border-radius: 4px;
+      margin-top: 14px;
+      width: 100%;
+      text-align: center;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .cred-item-box a:hover,
+    .btn-cred:hover {
+      background: var(--primary);
+      color: #000000;
+      box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+      transform: translateY(-2px);
+    }

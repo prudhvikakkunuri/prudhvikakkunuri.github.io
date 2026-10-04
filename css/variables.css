@@ -1,0 +1,141 @@
+/* =========================================================================        Design System & Tokens (Electric Sunset Amber & Void Black)
+       ========================================================================== */
+    :root {
+      --primary: #ff6b00;      /* Electric Sunset Amber */
+      --primary-hover: #ff8533;
+      --secondary: #ff9500;    /* Vivid Amber */
+      --accent: #ffb703;       /* Sunburst Gold */
+      --dark: #050505;         /* Void Black */
+      --dark-lighter: #0a0a0c; /* Deep Obsidian */
+      --surface: #121214;      /* Card Surface */
+      
+      --border: #1e1e24;
+      --border-lime: rgba(255, 107, 0, 0.45);
+      --border-accent: rgba(255, 107, 0, 0.45);
+
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--dark);
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* High-Contrast Custom Selection */
+    ::selection {
+      background-color: var(--primary);
+      color: #000000;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    /* Scanlines Overlay */
+    .scanlines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.2)
+      );
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.15;
+    }
+
+    /* Cyber Grid */
+    .cyber-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255, 107, 0, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 107, 0, 0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--dark);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #222222;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 1280px) {
+      .container {
+        padding: 0 16px;
+      }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .text-stroke {
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.35);
+      color: transparent;
+      transition: -webkit-text-stroke 0.2s ease;
+    }
+
+    .text-stroke-primary {
+      -webkit-text-stroke: 1.5px var(--primary);
+      color: transparent;
+    }
+
+    .neon-shadow {
+      box-shadow: 0 0 10px rgba(255, 107, 0, 0.5), 0 0 20px rgba(255, 107, 0, 0.3);
+    }

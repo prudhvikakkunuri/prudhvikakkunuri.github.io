@@ -1,0 +1,369 @@
+/* ==========================================================================
+       Let's Collab (Exact srish.site Layout & Transmission Box)
+       ========================================================================== */
+    section.collab-section {
+      padding: 110px 0;
+      background: #070709;
+      border-top: 1px solid var(--border);
+    }
+
+    .collab-transmission-box {
+      background: #0a0a0d;
+      border: 1px solid var(--border);
+      padding: 50px;
+      position: relative;
+    }
+
+    .collab-transmission-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 18px;
+      height: 18px;
+      border-top: 2px solid var(--primary);
+      border-left: 2px solid var(--primary);
+    }
+
+    .collab-transmission-box::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 18px;
+      height: 18px;
+      border-bottom: 2px solid var(--primary);
+      border-right: 2px solid var(--primary);
+    }
+
+    .collab-channels-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 36px 0;
+    }
+
+    .channel-card {
+      background: #0f0f13;
+      border: 1px solid var(--border);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .channel-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .channel-card .meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .channel-card .val {
+      font-family: var(--font-mono);
+      font-size: clamp(0.72rem, 0.95vw, 0.85rem);
+      font-weight: 600;
+      color: #ffffff;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+
+    .channel-card .hint,
+    .btn-channel {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(255, 107, 0, 0.08);
+      border: 1px solid var(--border-lime);
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .channel-card:hover .hint,
+    .channel-card:hover .btn-channel {
+      background: var(--primary);
+      color: #000000;
+      border-color: var(--primary);
+      box-shadow: 0 0 12px rgba(255, 107, 0, 0.35);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       srish.site Exact: LET'S COLLAB & SEND TRANSMISSION Form Console
+       ========================================================================== */
+    .srish-collab-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: stretch;
+    }
+
+    .srish-collab-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .status-work-pill {
+      background: var(--primary);
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .collab-giant-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 6.8vw, 6.8rem);
+      font-weight: 900;
+      line-height: 0.9;
+      color: #ffffff;
+      margin-bottom: 34px;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+
+    .collab-stroke-word {
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.35);
+      color: transparent;
+      display: inline-block;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .collab-stroke-word:hover {
+      -webkit-text-stroke-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .collab-email-block {
+      margin-bottom: 34px;
+    }
+
+    .collab-email-label {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .collab-email-link {
+      font-family: var(--font-display);
+      font-size: clamp(0.85rem, 1.6vw, 1.35rem);
+      font-weight: 800;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+      word-break: keep-all;
+      letter-spacing: -0.3px;
+      max-width: 100%;
+      transition: color 0.2s ease;
+    }
+
+    .collab-email-link i {
+      flex-shrink: 0;
+    }
+
+    .collab-email-link:hover {
+      color: var(--primary);
+    }
+
+    .collab-social-strip {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .collab-social-btn {
+      width: 56px;
+      height: 56px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.25rem;
+      background: #08080a;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .collab-social-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #000000;
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+    }
+
+    /* Right Column: Transmission Form Box */
+    .transmission-box-wrapper {
+      background: #09090c;
+      border: 1px solid var(--border);
+      padding: 44px 38px;
+      position: relative;
+    }
+
+    .transmission-box-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 14px;
+      height: 14px;
+      border-top: 2px solid var(--primary);
+      border-left: 2px solid var(--primary);
+    }
+
+    .transmission-box-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2px solid var(--primary);
+      border-right: 2px solid var(--primary);
+    }
+
+    .transmission-box-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      letter-spacing: -0.5px;
+    }
+
+    .transmission-fields-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .transmission-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .transmission-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+    }
+
+    .transmission-input {
+      width: 100%;
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 14px 16px;
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      outline: none;
+      transition: all 0.2s ease;
+      border-radius: 0;
+    }
+
+    .transmission-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 14px rgba(255, 107, 0, 0.35);
+    }
+
+    .transmission-textarea {
+      min-height: 130px;
+      resize: vertical;
+      margin-bottom: 24px;
+    }
+
+    .btn-transmit-action {
+      width: 100%;
+      background: var(--primary);
+      color: #000000;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 18px 24px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-transmit-action:hover {
+      background: #ffffff;
+      color: #000000;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-transmit-action i {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-transmit-action:hover i {
+      transform: translateX(4px);
+    }
+
+    .transmission-feedback-alert {
+      margin-top: 18px;
+      padding: 12px 16px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      border: 1px solid var(--border-lime);
+      background: rgba(255, 107, 0, 0.12);
+      color: var(--primary);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .srish-collab-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .transmission-fields-row {
+        grid-template-columns: 1fr;
+      }
+    }

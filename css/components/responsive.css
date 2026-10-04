@@ -1,0 +1,617 @@
+/* ==========================================================================
+       Responsive System (Mobile First & Breakpoint Precision)
+       ========================================================================== */
+    @media (max-width: 1280px) {
+      .nav-menu {
+        gap: clamp(6px, 1vw, 10px);
+      }
+      .nav-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.4px;
+        padding: 4px 2px;
+      }
+      .cmd-k-trigger span:not(.badge) {
+        display: none;
+      }
+      .btn-angled-lime {
+        padding: 8px 12px;
+        font-size: 0.78rem;
+      }
+      .arsenal-layout-grid {
+        grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+        gap: 16px;
+      }
+      .numbered-skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .numbered-card {
+        padding: 12px 12px;
+        min-height: 88px;
+      }
+      .numbered-card .skill-name {
+        font-size: 0.82rem;
+      }
+      .sidebar-tab-btn {
+        padding: 10px 12px;
+        font-size: 0.72rem;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .nav-menu {
+        gap: 8px;
+      }
+      .nav-link {
+        font-size: 0.7rem;
+        letter-spacing: 0.3px;
+        padding: 4px 2px;
+      }
+      .brand-terminal {
+        margin-right: 8px;
+      }
+      .nav-actions {
+        margin-left: 8px;
+        gap: 6px;
+      }
+      .btn-angled-lime {
+        padding: 7px 11px;
+        font-size: 0.76rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-sub-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stat-strip-box {
+        border-right: none;
+      }
+      .work-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .arsenal-layout-grid {
+        grid-template-columns: 1fr;
+      }
+      .numbered-skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .career-grid {
+        grid-template-columns: 1fr;
+      }
+      .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .collab-channels-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 15px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      /* Navbar */
+      .nav-inner {
+        height: 64px;
+      }
+
+      .brand-terminal {
+        font-size: 1.05rem;
+      }
+
+      .nav-menu {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background: rgba(9, 9, 12, 0.98);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-bottom: 1px solid var(--border-lime);
+        flex-direction: column;
+        padding: 24px 20px 40px;
+        gap: 8px;
+        z-index: 999;
+        overflow-y: auto;
+      }
+
+      .nav-menu.open {
+        display: flex;
+        animation: mobileNavSlide 0.25s ease forwards;
+      }
+
+      @keyframes mobileNavSlide {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-menu li {
+        width: 100%;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 12px 14px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #141418;
+      }
+
+      .nav-mobile-action {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .mobile-btn {
+        display: flex;
+      }
+
+      .cmd-k-trigger {
+        display: none;
+      }
+
+      .nav-actions .btn-angled-lime {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+        clip-path: none;
+      }
+
+      /* Hero Section */
+      section.hero {
+        padding-top: 86px;
+        padding-bottom: 40px;
+        min-height: auto;
+      }
+
+      .hero-eyebrow-pill {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        max-width: 100%;
+        white-space: normal;
+        margin-bottom: 18px;
+        line-height: 1.4;
+      }
+
+      .hero-giant-name {
+        font-size: clamp(1.7rem, 7.5vw, 3.2rem);
+        line-height: 0.98;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+      }
+
+      .hero-terminal-card {
+        padding: 20px 16px;
+      }
+
+      .hero-card-role-title {
+        font-size: 1.15rem;
+        line-height: 1.35;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .hero-card-bio {
+        font-size: 0.85rem;
+        line-height: 1.65;
+        margin-bottom: 22px;
+      }
+
+      .hero-btn-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .hero-btn-row .btn-solid-white,
+      .hero-btn-row .btn-ghost-mono {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-portrait-card {
+        padding: 12px;
+      }
+
+      .portrait-photo-box {
+        height: 280px;
+      }
+
+      .portrait-telemetry {
+        font-size: 0.68rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      /* Stats Strip */
+      section.stats-strip {
+        padding: 30px 0;
+      }
+
+      .stats-strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .stat-strip-box {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 12px 6px;
+      }
+
+      .stat-strip-box:nth-child(3),
+      .stat-strip-box:nth-child(4) {
+        border-bottom: none;
+      }
+
+      .stat-giant-num {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+      }
+
+      .stat-label-mono {
+        font-size: 0.68rem;
+      }
+
+      /* Work Index */
+      section.work-index-section {
+        padding: 60px 0;
+      }
+
+      .section-eyebrow-mono {
+        font-size: 0.72rem;
+        margin-bottom: 8px;
+      }
+
+      .work-index-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .dual-headline {
+        font-size: clamp(1.8rem, 7.8vw, 2.6rem);
+        line-height: 1.05;
+        letter-spacing: -1px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .dual-headline .word-solid {
+        margin-right: 8px;
+      }
+
+      .work-search-bar {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 14px;
+      }
+
+      .work-filter-pills-row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        margin-bottom: 24px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .work-filter-pills-row::-webkit-scrollbar {
+        display: none;
+      }
+
+      .filter-pill {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 7px 14px;
+        font-size: 0.72rem;
+      }
+
+      .work-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .work-card {
+        padding: 20px 16px;
+      }
+
+      .work-card-title {
+        font-size: 1.15rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .work-card-desc {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .work-tags-wrap {
+        gap: 4px;
+        margin-bottom: 16px;
+      }
+
+      .tech-tag {
+        font-size: 0.62rem;
+        padding: 3px 6px;
+      }
+
+      /* Tech Arsenal */
+      section.tech-arsenal-section {
+        padding: 60px 0;
+      }
+
+      .arsenal-top-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .operational-pill {
+        font-size: 0.68rem;
+        padding: 6px 12px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .arsenal-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      /* Swipeable Category Pill Strip on Mobile */
+      .arsenal-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+      }
+
+      .arsenal-sidebar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .sidebar-tab-btn {
+        width: auto;
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 9px 14px;
+        font-size: 0.74rem;
+        gap: 8px;
+      }
+
+      .numbered-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .numbered-card {
+        padding: 16px 14px;
+        min-height: 82px;
+        background: #08080a;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .numbered-card-top {
+        margin-bottom: 10px;
+      }
+
+      .numbered-card .card-index {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: #727280;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .numbered-card .card-app-icon {
+        display: none;
+      }
+
+      .numbered-card .skill-name {
+        font-family: var(--font-display);
+        font-size: clamp(0.92rem, 3.6vw, 1.06rem);
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: -0.3px;
+        line-height: 1.2;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      /* Career Section */
+      section.career-section {
+        padding: 60px 0;
+      }
+
+      .career-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+
+      .career-card {
+        padding: 22px 16px;
+      }
+
+      .career-role {
+        font-size: 1.15rem;
+      }
+
+      .career-institution {
+        font-size: 0.78rem;
+        margin-bottom: 14px;
+      }
+
+      .career-list-mono li {
+        font-size: 0.78rem;
+        line-height: 1.6;
+        padding-left: 14px;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .cred-item-box {
+        padding: 16px 14px;
+      }
+
+      .cred-item-box h4 {
+        font-size: 0.95rem;
+      }
+
+      /* Let's Collab */
+      section.collab-section {
+        padding: 60px 0;
+      }
+
+      .collab-transmission-box {
+        padding: 22px 16px;
+      }
+
+      .collab-channels-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 22px 0;
+      }
+
+      .channel-card {
+        padding: 16px 14px;
+      }
+
+      .channel-card .val {
+        font-size: 0.82rem;
+      }
+
+      .collab-action-buttons {
+        flex-direction: column !important;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .collab-action-buttons a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        clip-path: none !important;
+      }
+
+      /* Command Modal */
+      .cmd-modal-backdrop {
+        padding: 12px;
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+
+      .cmd-input-row {
+        padding: 12px 14px;
+      }
+
+      .cmd-modal-input {
+        font-size: 0.86rem;
+      }
+
+      .cmd-results {
+        max-height: 50vh;
+      }
+
+      .cmd-result-entry {
+        padding: 10px 14px;
+        font-size: 0.78rem;
+      }
+
+      .cmd-modal-footer {
+        display: none;
+      }
+
+      /* Toast */
+      #copy-toast {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        text-align: center;
+        font-size: 0.78rem;
+      }
+
+      /* Footer */
+      footer.site-footer {
+        padding: 30px 0;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        font-size: 0.75rem;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-giant-name {
+        font-size: clamp(1.5rem, 7.6vw, 2.2rem);
+        letter-spacing: -0.5px;
+      }
+      .nav-actions .btn-angled-lime {
+        display: none;
+      }
+      .portrait-photo-box {
+        height: 240px;
+      }
+      .stat-giant-num {
+        font-size: 1.8rem;
+      }
+      .dual-headline {
+        font-size: clamp(1.6rem, 7.2vw, 2.1rem);
+      }
+      .numbered-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .numbered-card {
+        padding: 13px 12px;
+        min-height: 74px;
+      }
+      .numbered-card .card-index {
+        font-size: 0.68rem;
+      }
+      .numbered-card .skill-name {
+        font-size: 0.88rem;
+      }
+    }

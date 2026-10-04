@@ -1,0 +1,20 @@
+<!-- Interactive Command Palette Modal (CMD + K) -->
+  <div class="cmd-modal-backdrop" id="cmd-modal" role="dialog" aria-modal="true" aria-label="Command search">
+    <div class="cmd-modal-window">
+      <div class="cmd-input-row">
+        <span class="prompt">&gt;</span>
+        <input type="text" id="cmd-search-field" class="cmd-modal-input" placeholder="Type a project, technology, or jump to section..." autocomplete="off">
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); cursor: pointer;" id="cmd-exit">ESC</span>
+      </div>
+      <ul class="cmd-results" id="cmd-results-view">
+        <!-- Results list -->
+      </ul>
+      <div class="cmd-modal-footer">
+        <span>Navigation: [ARROW_KEYS]</span>
+        <span>Select: [ENTER] &bull; Close: [ESC]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="copy-toast" role="status" aria-live="polite">COPIED TO CLIPBOARD</div>

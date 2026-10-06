@@ -5,7 +5,7 @@
 (function() {
   'use strict';
   // ==========================================================================
-    // 1. WORK INDEX: Real-time Search Database & Category Pills (srish.site Match)
+    // 1. WORK INDEX: Real-time Search Database & Category Pills
     // ==========================================================================
     const dbSearchInput = document.getElementById('db-search');
     const filterPills = document.querySelectorAll('.filter-pill');

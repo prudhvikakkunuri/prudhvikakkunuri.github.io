@@ -6,7 +6,7 @@
   'use strict';
   // 5. Scroll Reveal Intersection Observer
     (function initScrollReveal() {
-      const revealElements = document.querySelectorAll('.work-card, .career-card, .cred-item-box, .channel-card, .stat-strip-box, .arsenal-top-row, .collab-transmission-box, .about-profile-card, .about-content-column, .srish-collab-left, .transmission-box-wrapper');
+      const revealElements = document.querySelectorAll('.work-card, .career-card, .cred-item-box, .channel-card, .stat-strip-box, .arsenal-top-row, .collab-transmission-box, .about-profile-card, .about-content-column, .collab-left, .transmission-box-wrapper');
       
       revealElements.forEach(el => {
         el.classList.add('reveal-on-scroll');

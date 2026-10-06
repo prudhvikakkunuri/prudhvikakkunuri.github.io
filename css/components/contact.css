@@ -1,5 +1,5 @@
 /* ==========================================================================
-       Let's Collab (Exact srish.site Layout & Transmission Box)
+       Let's Collab (Transmission Box & Collaboration Console)
        ========================================================================== */
     section.collab-section {
       padding: 110px 0;
@@ -103,9 +103,9 @@
     }
 
     /* ==========================================================================
-       srish.site Exact: LET'S COLLAB & SEND TRANSMISSION Form Console
+       LET'S COLLAB & SEND TRANSMISSION Form Console
        ========================================================================== */
-    .srish-collab-grid {
+    .collab-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
@@ -113,7 +113,7 @@
       align-items: stretch;
     }
 
-    .srish-collab-left {
+    .collab-left {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -359,7 +359,7 @@
     }
 
     @media (max-width: 900px) {
-      .srish-collab-grid {
+      .collab-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }

@@ -5,7 +5,7 @@
 (function() {
   'use strict';
   // ==========================================================================
-    // 2. TECH ARSENAL: Category Sidebar & 4-Column Numbered Cards (srish.site Match)
+    // 2. TECH ARSENAL: Category Sidebar & 4-Column Numbered Cards
     // ==========================================================================
     const skillsStore = {
       agents: [

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://prudhvikakkunuri.github.io/sitemap.xml
